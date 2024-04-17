@@ -64,8 +64,11 @@ const Repos = () => {
       </div>
       <div className="grid grid-cols-2 pt-24 gap-10">
         {datas.length > 1 &&
-          datas.map((i) => (
-            <div className="rounded-xl bg-slate-500 w-80 h-20 flex justify-between items-center px-6 shadow-md">
+          datas.map((i, index) => (
+            <div
+              key={index}
+              className="rounded-xl bg-slate-500 w-80 h-20 flex justify-between items-center px-6 shadow-md"
+            >
               <div className="text-white font-bold">{i.name}</div>
               <div className="text-white opacity-50 tracking-wider font-light">
                 {i.language}
