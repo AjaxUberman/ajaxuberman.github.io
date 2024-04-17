@@ -1,0 +1,34 @@
+{
+  "websites": [
+    {
+      "img": "https://r.resimlink.com/f8qhSjd0p7CE.png",
+      "title": "EA FC24 Pro Club Builder",
+      "description": "Website that builds custom players for pro club mode.",
+      "href": "https://eaproclubwebapp.netlify.app"
+    },
+    {
+      "img": "https://r.resimlink.com/f8qhSjd0p7CE.png",
+      "title": "MultiSelector Rick&Morty",
+      "description": "Multiselection TestCase for ai unicorn.",
+      "href": "https://eaproclubwebapp.netlify.app"
+    },
+    {
+      "img": "https://r.resimlink.com/-tpYaK9dEN1.png",
+      "title": "Spotify Clone",
+      "description": "Half clone with play futures.",
+      "href": "https://spotifyhalfclone.netlify.app"
+    },
+    {
+      "img": "https://r.resimlink.com/dx76Q9A.png",
+      "title": "Weather App With API",
+      "description": "Stay informed with our intuitive weather app for accurate forecasts anytime, anywhere.",
+      "href": "https://fanciful-khapse-3a6e54.netlify.app"
+    },
+    {
+      "img": "https://r.resimlink.com/f8qhSjd0p7CE.png",
+      "title": "Crypto Synch Alerter",
+      "description": "Track correlated crypto coins effortlessly with our specialized app.",
+      "href": "https://eaproclubwebapp.netlify.app"
+    }
+  ]
+}
