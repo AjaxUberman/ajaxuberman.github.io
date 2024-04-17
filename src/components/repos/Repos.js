@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Repos = () => {
   const [datas, setDatas] = useState([]);
   const [basicDatas, setBasicDatas] = useState([]);
+
   /* API REPOS */
   useEffect(() => {
     const fetchData = async () => {
@@ -18,8 +19,10 @@ const Repos = () => {
         console.error("Error fetching repos:", error);
       }
     };
-    fetchData();
-  }, [datas]);
+    if (!datas.length) {
+      fetchData();
+    }
+  }, []);
 
   /* Basıc Datas */
   useEffect(() => {
@@ -31,11 +34,13 @@ const Repos = () => {
         const fetched = await response.json();
         setBasicDatas(fetched);
       } catch (error) {
-        console.error("Error fetching basic datas:", error);
+        console.error("Error fetching repos:", error);
       }
     };
-    fetchData();
-  }, [basicDatas]);
+    if (!datas.length) {
+      fetchData();
+    }
+  }, []);
 
   return (
     <div className="bg-active-item w-screen h-screen font-fira-sans flex flex-col pt-24 items-center">
@@ -62,32 +67,39 @@ const Repos = () => {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-2 pt-24 gap-10">
-        {datas.length > 1 &&
-          datas.map((i, index) => (
-            <div
-              key={index}
-              className="rounded-xl bg-slate-500 w-80 h-20 flex justify-between items-center px-6 shadow-md"
-            >
-              <div className="text-white font-bold">{i.name}</div>
-              <div className="text-white opacity-50 tracking-wider font-light">
-                {i.language}
-              </div>
-              <div className="relative ">
-                <Link
-                  to={i.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-active-item hover:bg-siyah-text hover:text-active-item"
+      {datas.length > 1 ? (
+        <div className="grid grid-cols-2 pt-24 gap-10">
+          {datas.length > 1
+            ? datas.map((i, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl bg-slate-500 w-80 h-20 flex justify-between items-center px-6 shadow-md"
                 >
-                  <div className="absolute right-2 top-1">
-                    <HiCursorClick />
+                  <div className="text-white font-bold">{i.name}</div>
+                  <div className="text-white opacity-50 tracking-wider font-light">
+                    {i.language}
                   </div>
-                </Link>
-              </div>
-            </div>
-          ))}
-      </div>
+                  <div className="relative ">
+                    <Link
+                      to={i.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-full bg-active-item hover:bg-siyah-text hover:text-active-item"
+                    >
+                      <div className="absolute right-2 top-1">
+                        <HiCursorClick />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              ))
+            : ""}
+        </div>
+      ) : (
+        <div className="text-red flex text-4xl justify-center items-center pt-10">
+          GitHub API'den veri alınamıyor.Farklı IP deneyiniz.
+        </div>
+      )}
     </div>
   );
 };
