@@ -19,8 +19,8 @@ module.exports = {
         "active-item": "#E1F7F5",
       },
       boxShadow: {
-        subtle: "rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;",
-        extra: " 15px 15px 0px 0px rgba(0,0,0);",
+        subtle: "0 12px 24px 0 rgba(0, 0, 0, 0.15)",
+        extra: "15px 15px 0px 0px rgba(0, 0, 0, 0.1)",
       },
       backgroundImage: {
         "games-bg":

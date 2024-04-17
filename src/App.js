@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import About from "./components/about/About";
 import Repos from "./components/repos/Repos";
 import WebSites from "./components/websites/WebSites";
+import "./index.css";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 924px)" });
