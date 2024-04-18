@@ -43,18 +43,22 @@ const Repos = () => {
   }, []);
 
   return (
-    <div className="bg-active-item w-screen h-screen font-fira-sans flex flex-col pt-24 items-center">
-      <div className="flex items-center gap-10 rounded-full  bg-slate-500 px-4 py-2 w-fit h-fit shadow-xl ">
-        <img
-          src={basicDatas.avatar_url}
-          alt=""
-          className="2xl:w-40 2xl:h-40 w-20 h-20 rounded-full"
-        />
-        <div>
-          <h1 className="font-bold text-white text-2xl">{basicDatas.login}</h1>
-          <h2 className="text-active-item tracking-widest">
-            {basicDatas.location}
-          </h2>
+    <div className="bg-active-item w-screen h-full md:h-screen font-fira-sans flex flex-col pt-24 pb-10 items-center">
+      <div className="flex flex-col md:flex-row md:py-0 py-4 items-center gap-4 md:gap-10 rounded-full  bg-slate-500 px-4  w-60 md:w-fit h-fit shadow-xl ">
+        <div className="flex gap-10 items-center">
+          <img
+            src={basicDatas.avatar_url}
+            alt=""
+            className="2xl:w-40 2xl:h-40 md:w-20 md:h-20 w-10 h-10 rounded-full"
+          />
+          <div>
+            <h1 className="font-bold text-white md:text-2xl text-lg">
+              {basicDatas.login}
+            </h1>
+            <h2 className="text-active-item text-sm tracking-widest">
+              {basicDatas.location}
+            </h2>
+          </div>
         </div>
         <div>
           <a
@@ -68,15 +72,19 @@ const Repos = () => {
         </div>
       </div>
       {datas.length > 1 ? (
-        <div className="grid grid-cols-2 pt-24 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-24 gap-10">
           {datas.length > 1
             ? datas.map((i, index) => (
                 <div
                   key={index}
-                  className="rounded-xl bg-slate-500 w-80 h-20 flex justify-between items-center px-6 shadow-md"
+                  className="rounded-xl bg-slate-500 w-60 md:w-80 h-20 flex justify-between items-center px-6 shadow-md"
                 >
-                  <div className="text-white font-bold">{i.name}</div>
-                  <div className="text-white opacity-50 tracking-wider font-light">
+                  <div className="text-white font-bold">
+                    {i.name && i.name.length > 15
+                      ? i.name.slice(0, 15).concat("...")
+                      : i.name}
+                  </div>
+                  <div className="text-white opacity-50 hidden md:inline tracking-wider font-light">
                     {i.language}
                   </div>
                   <div className="relative ">

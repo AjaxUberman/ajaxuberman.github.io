@@ -30,5 +30,26 @@
       "description": "Track correlated crypto coins effortlessly with our specialized app.",
       "href": "https://eaproclubwebapp.netlify.app"
     }
+  ],
+
+  "games": [
+    {
+      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
+      "title": "Tank Game",
+      "description": "Totally made with JS",
+      "href": ""
+    },
+    {
+      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
+      "title": "Tank Game",
+      "description": "Totally made with JS",
+      "href": ""
+    },
+    {
+      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
+      "title": "Tank Game",
+      "description": "Totally made with JS",
+      "href": ""
+    }
   ]
 }

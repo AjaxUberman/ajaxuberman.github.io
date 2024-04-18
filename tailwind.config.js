@@ -20,7 +20,7 @@ module.exports = {
       },
       boxShadow: {
         subtle: "0 12px 24px 0 rgba(0, 0, 0, 0.15)",
-        extra: "15px 15px 0px 0px rgba(0, 0, 0, 0.1)",
+        extra: "15px 15px 0px 0px rgba(0, 0, 0, 1)",
       },
       backgroundImage: {
         "games-bg":

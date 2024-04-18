@@ -1,14 +1,23 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 const HomePage = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 924px)" });
+
   return (
-    <div className="2xl:px-64 md:px-52 md:pt-20 2xl:pt-48 flex justify-around font-fira-sans">
+    <div
+      className={`2xl:px-64 md:px-52 py-10 px-4 md:pt-20 2xl:pt-48 flex justify-around font-fira-sans ${
+        isTabletOrMobile ? "grid grid-cols-1 gap-6 px-5" : ""
+      }`}
+    >
       {/* Texts */}
-      <div className="text-siyah-text flex flex-col gap-4 2xl:gap-10 w-96">
-        <div className="flex flex-col gap-6">
-          <div className="gap-2 flex flex-col">
-            <h2 className="font-bold text-xl 2xl:text-3xl ">Hello, I'm </h2>
-            <h1 className="font-extrabold text-4xl 2xl:text-5xl tracking-widest">
+      <div className="text-siyah-text flex flex-col gap-2 md:gap-4 2xl:gap-10  md:w-96 ">
+        <div className="flex flex-col md:gap-6 gap-4">
+          <div className="gap-0 md:gap-2 flex flex-col">
+            <h2 className="font-bold text-lg md:text-xl 2xl:text-3xl ">
+              Hello, I'm{" "}
+            </h2>
+            <h1 className="font-extrabold text-2xl md:text-4xl 2xl:text-5xl tracking-widest">
               Baris Kayikci
             </h1>
           </div>

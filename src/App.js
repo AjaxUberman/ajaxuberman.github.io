@@ -43,23 +43,35 @@ function App() {
   }, [activeMenu]);
 
   return (
-    <div className="flex flex-col overflow-x-hidden">
+    <div className="flex flex-col overflow-x-hidden ">
       <div className="bg-bg-bugday" ref={refs.home}>
         {isTabletOrMobile ? <MobileMenu /> : <NavBar />}
-        <div className=" h-screen">
+        <div className={`${isTabletOrMobile ? "h-full " : "h-screen"}`}>
           <HomePage />
         </div>
       </div>
-      <div className="h-screen w-screen overflow-y-hidden" ref={refs.games}>
+      <div
+        className="h-screen overflow-x-hidden overflow-y-hidden"
+        ref={refs.games}
+      >
         <Games />
       </div>
-      <div className="h-screen w-screen overflow-y-hidden" ref={refs.websites}>
+      <div
+        className="h-screen overflow-x-hidden overflow-y-hidden"
+        ref={refs.websites}
+      >
         <WebSites />
       </div>
-      <div className="h-screen w-screen overflow-y-hidden" ref={refs.about}>
+      <div
+        className="h-full md:h-screen overflow-x-hidden overflow-y-hidden"
+        ref={refs.about}
+      >
         <About />
       </div>
-      <div className="h-screen w-screen overflow-y-hidden" ref={refs.repos}>
+      <div
+        className="h-full overflow-x-hidden overflow-y-hidden"
+        ref={refs.repos}
+      >
         <Repos />
       </div>
     </div>
