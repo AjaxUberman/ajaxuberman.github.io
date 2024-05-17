@@ -1,0 +1,3 @@
+.my-slider .slick-slide:not(:first-child) {
+  margin-left: 4px;
+}
