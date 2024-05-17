@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 const WebSites = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 924px)" });
   const [slicer, setSlicer] = useState(0);
+  const [active, setActive] = useState(false);
 
   /* Slicer */
   const clickHandler = (e) => {
@@ -19,6 +20,11 @@ const WebSites = () => {
       setSlicer(3);
     }
   }, [isTabletOrMobile]);
+
+  /* Description Active */
+  const activeHandler = (index) => {
+    setActive(index === active ? null : index);
+  };
 
   return (
     <div className="bg-websites-bg bg-cover h-screen flex flex-col justify-center  items-center font-fira-sans">
@@ -44,7 +50,7 @@ const WebSites = () => {
                   className="flex flex-col pt-10 px-4 2xl:w-96 md:w-72 text-center gap-4 items-center  bg-pastel-mavi rounded-md h-[500px] relative shadow-md"
                 >
                   <img
-                    className="h-60 w-80 object-cover rounded-md"
+                    className="h-60 w-80 object-cover rounded-md shadow-xl"
                     src={website.img}
                     alt={website.title}
                   />
@@ -53,11 +59,29 @@ const WebSites = () => {
                       <h1 className="text-white font-semibold text-lg md:text-2xl">
                         {website.title}
                       </h1>
-                      <h2 className="text-blue-200 tracking-wide">
+                      <button
+                        className="text-blue-200 tracking-wide"
+                        onClick={() => activeHandler(index)}
+                      >
                         {website.description.length > 45
                           ? website.description.slice(0, 45).concat("...")
                           : website.description}
-                      </h2>
+                      </button>
+                      {active === index ? (
+                        <div className="flex justify-center">
+                          <div className="bg-white absolute z-50 h-52 w-60 text-sm px-4 py-2 top-20 text-center items-center flex border border-gray-400 rounded-md translate-y-52 shadow-xl">
+                            <span>{website.description}</span>
+                            <button
+                              className="absolute text-white bg-red-400 -top-3 -right-3 py-1 px-2 rounded-full border-t border-gray-400"
+                              onClick={() => setActive(null)}
+                            >
+                              X
+                            </button>
+                          </div>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
                   <a

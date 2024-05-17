@@ -1,11 +1,15 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 924px)" });
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
       className={`2xl:px-64 md:px-52 py-10 px-4 md:pt-20 2xl:pt-48 flex justify-around font-fira-sans ${
         isTabletOrMobile ? "grid grid-cols-1 gap-6 px-5" : ""
       }`}
@@ -107,7 +111,7 @@ const HomePage = () => {
         src="https://images.gamebanana.com/img/ico/sprays/5a19d20765d97.gif"
         className="object-cover w-96"
       />
-    </div>
+    </motion.div>
   );
 };
 

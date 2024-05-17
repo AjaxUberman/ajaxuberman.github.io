@@ -15,13 +15,13 @@
     {
       "img": "https://r.resimlink.com/-tpYaK9dEN1.png",
       "title": "Spotify Clone",
-      "description": "Half clone with play futures.",
+      "description": "Half clone with play futures.Experience the ultimate music streaming platform with our Spotify clone. Discover endless playlists, access a vast library of tracks, and enjoy personalized recommendations tailored just for you. Dive into a world of music where every beat brings joy. ",
       "href": "https://spotifyhalfclone.netlify.app"
     },
     {
       "img": "https://r.resimlink.com/dx76Q9A.png",
       "title": "Weather App With API",
-      "description": "Stay informed with our intuitive weather app for accurate forecasts anytime, anywhere.",
+      "description": "Stay informed with our intuitive weather app for accurate forecasts anytime, anywhere. Needs openweathermap.org api.",
       "href": "https://fanciful-khapse-3a6e54.netlify.app"
     },
     {
@@ -34,22 +34,25 @@
 
   "games": [
     {
-      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
-      "title": "Tank Game",
-      "description": "Totally made with JS",
-      "href": ""
+      "img": "https://r.resimlink.com/NWSTMV.png",
+      "title": "ToDo Game!",
+      "description": "An application where you can earn coins by completing tasks and use these coins to purchase free time. Built using React and JSON server.",
+      "href": "https://todogamerpg.netlify.app",
+      "repo": "https://github.com/AjaxUberman/todogame"
+    },
+    {
+      "img": "https://r.resimlink.com/FP29av4w71ou.png",
+      "title": "Fitness App",
+      "description": "Using local storage to store your data. Built with TypeScript. This application offers you a nutrition and training program tailored to your preferences.",
+      "href": "https://gymlibraryapp.netlify.app",
+      "repo": "https://github.com/AjaxUberman/gymapp"
     },
     {
       "img": "https://www.atarisalon.com/games/images/Battle_City.png",
       "title": "Tank Game",
       "description": "Totally made with JS",
-      "href": ""
-    },
-    {
-      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
-      "title": "Tank Game",
-      "description": "Totally made with JS",
-      "href": ""
+      "href": "",
+      "repo": ""
     }
   ]
 }

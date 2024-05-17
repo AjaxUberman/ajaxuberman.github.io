@@ -16,7 +16,7 @@ const about = () => {
           <h1 className="text-pastel-bugday text-sm  2xl:text-xl font-semibold">
             Hello! I'm{"  "}
             <span className="text-green-700 font-bold">
-              &lt;Baris Kayikci /&gt;{" "}
+              &lt;Baris Kayikci /&gt;
             </span>
             , a Front-End Developer with a passion for crafting digital
             experiences. My journey into the world of coding began after

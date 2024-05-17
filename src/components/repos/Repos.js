@@ -43,7 +43,7 @@ const Repos = () => {
   }, []);
 
   return (
-    <div className="bg-active-item w-screen h-full md:h-screen font-fira-sans flex flex-col pt-24 pb-10 items-center">
+    <div className="bg-active-item w-screen h-full md:h-full font-fira-sans flex flex-col pt-20 pb-10 items-center">
       <div className="flex flex-col md:flex-row md:py-0 py-4 items-center gap-4 md:gap-10 rounded-full  bg-slate-500 px-4  w-60 md:w-fit h-fit shadow-xl ">
         <div className="flex gap-10 items-center">
           <img
