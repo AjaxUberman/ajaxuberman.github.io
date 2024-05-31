@@ -124,7 +124,7 @@ const Games = () => {
                       <img
                         alt={i.title}
                         src={i.img}
-                        className="w-40 h-40 2xl:w-60 2xl:h-60 object-cover object-top translate-x-10 "
+                        className="w-40 h-40 2xl:w-60 2xl:h-60 object-cover object-top mx-auto center-img mb-0 2xl:mb-10 "
                       />
                       <div className="text-center flex flex-col 2xl:gap-2 gap-0">
                         <h1 className="text-white 2xl:text-3xl md:text-xl font-semibold ">

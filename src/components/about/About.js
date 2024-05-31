@@ -38,7 +38,7 @@ const about = () => {
           <div className="flex items-center gap-4 pb-10 ">
             <a
               className="bg-green-400 text-white py-2 px-4 rounded-full text-lg md:text-2xl hover:scale-110 transition duration-100 ease-in hover:bg-white hover:text-green-400 "
-              href="resume"
+              href="https://drive.google.com/file/d/1WibOvW6_Mefknvu5uEiA9iex3qfDWY1B/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >

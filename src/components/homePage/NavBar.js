@@ -59,7 +59,7 @@ const NavBar = ({ active }) => {
           value={"games"}
           onClick={clickHandler}
         >
-          GAMES
+          APPS
         </button>
         <button
           className="bg-pastel-sari py-4 px-2 rounded-full w-24 hover:scale-110 transition duration-100 ease-in shadow-md"

@@ -1,3 +1,13 @@
-.my-slider .slick-slide:not(:first-child) {
-  margin-left: 4px;
+.slick-prev {
+  left: -70px;
+  scale: 160%;
+}
+
+.slick-next {
+  right: -70px;
+  scale: 160%;
+}
+
+.slick-slide {
+  padding-right: 5px;
 }
