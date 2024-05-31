@@ -23,12 +23,6 @@
       "title": "Weather App With API",
       "description": "Stay informed with our intuitive weather app for accurate forecasts anytime, anywhere. Needs openweathermap.org api.",
       "href": "https://fanciful-khapse-3a6e54.netlify.app"
-    },
-    {
-      "img": "https://r.resimlink.com/f8qhSjd0p7CE.png",
-      "title": "Crypto Synch Alerter",
-      "description": "Track correlated crypto coins effortlessly with our specialized app.",
-      "href": "https://eaproclubwebapp.netlify.app"
     }
   ],
 
@@ -46,13 +40,6 @@
       "description": "Using local storage to store your data. Built with TypeScript. This application offers you a nutrition and training program tailored to your preferences.",
       "href": "https://gymlibraryapp.netlify.app",
       "repo": "https://github.com/AjaxUberman/gymapp"
-    },
-    {
-      "img": "https://www.atarisalon.com/games/images/Battle_City.png",
-      "title": "Tank Game",
-      "description": "Totally made with JS",
-      "href": "",
-      "repo": ""
     }
   ]
 }
