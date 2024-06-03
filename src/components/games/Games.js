@@ -28,7 +28,7 @@ const Games = () => {
   /* Slider */
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: slice,
     slidesToScroll: 1,
@@ -119,54 +119,72 @@ const Games = () => {
                   websites.games.map((i, index) => (
                     <div
                       key={index}
-                      className="rounded-md bg-pastel-yesil flex flex-col items-center 2xl:py-20  2xl:gap-10 gap-4 shadow-md justify-center py-4 h-fit "
+                      className="rounded-md bg-pastel-yesil flex flex-col items-center justify-center md:h-[340px] 2xl:h-[580px] 2xl:gap-10 gap-4 shadow-md py-4"
                     >
-                      <img
-                        alt={i.title}
-                        src={i.img}
-                        className="w-40 h-40 2xl:w-60 2xl:h-60 object-cover object-top mx-auto center-img mb-0 2xl:mb-10 "
-                      />
-                      <div className="text-center flex flex-col 2xl:gap-2 gap-0">
-                        <h1 className="text-white 2xl:text-3xl md:text-xl font-semibold ">
-                          {i.title}
-                        </h1>
-                        <button
-                          className="text-sm text-white 2xl:text-lg tracking-widest"
-                          onClick={() => descHandler(index)}
-                        >
-                          {i.description.length < 22
-                            ? i.description
-                            : i.description.slice(0, 20).concat("...")}
-                        </button>
-                        {activeIndex === index && (
-                          <div className="bg-white absolute z-50 h-60 w-40 text-sm px-4 py-2 top-20 text-center items-center flex border border-gray-400 rounded-md">
-                            <span>{i.description}</span>
-                            <button
-                              className="absolute text-white bg-red-400 -top-3 -right-3 py-1 px-2 rounded-full border-t border-gray-400"
-                              onClick={() => setActiveIndex(null)}
+                      <div className="2xl:translate-y-6">
+                        <img
+                          alt={i.title}
+                          src={i.img}
+                          className="w-40 h-40 2xl:w-60 2xl:h-60 object-cover object-top mx-auto center-img mb-0 2xl:mb-10 "
+                        />
+                        <div className="text-center flex flex-col 2xl:gap-2 gap-0">
+                          <h1 className="text-white 2xl:text-3xl md:text-xl font-semibold ">
+                            {i.title}
+                          </h1>
+                          <button
+                            className="text-sm text-white 2xl:text-lg tracking-widest"
+                            onClick={() => descHandler(index)}
+                          >
+                            {i.description.length < 22
+                              ? i.description
+                              : i.description.slice(0, 20).concat("...")}
+                          </button>
+                          {activeIndex === index && (
+                            <div className="bg-white absolute z-50 h-60 w-80 text-sm px-4 py-2 top-5 2xl:top-60 2xl:translate-x-16 text-center items-center flex border border-gray-400 rounded-md">
+                              <span>{i.description}</span>
+                              <button
+                                className="absolute text-white bg-red-400 -top-3 -right-3 py-1 px-2 rounded-full border-t border-gray-400"
+                                onClick={() => setActiveIndex(null)}
+                              >
+                                X
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex flex-col gap-6 justify-center items-center mt-4">
+                          <div className="flex gap-4">
+                            <Link
+                              to={i.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-siyah-text text-bg-bugday rounded-lg py-2 px-2 hover:bg-white hover:text-siyah-text transition duration-100 ease-in shadow-md"
                             >
-                              X
-                            </button>
+                              Visit
+                            </Link>
+                            <Link
+                              to={i.repo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-transparent border-2 border-siyah-text rounded-lg py-2 px-2 hover:bg-white hover:text-siyah-text transition duration-100 ease-in"
+                            >
+                              Source Code
+                            </Link>
                           </div>
-                        )}
-                      </div>
-                      <div className="flex gap-6 justify-center">
-                        <Link
-                          to={i.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-siyah-text text-bg-bugday rounded-lg py-2 px-2 hover:bg-white hover:text-siyah-text transition duration-100 ease-in shadow-md"
-                        >
-                          Visit
-                        </Link>
-                        <Link
-                          to={i.repo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-transparent border-2 border-siyah-text rounded-lg py-2 px-2 hover:bg-white hover:text-siyah-text transition duration-100 ease-in"
-                        >
-                          Source Code
-                        </Link>
+                          {i.server ? (
+                            <div>
+                              <Link
+                                to={i.server}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white border-2 border-siyah-text rounded-lg py-2 px-2 hover:bg-green-400 hover:text-white transition duration-100 ease-in"
+                              >
+                                Run Server
+                              </Link>
+                            </div>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}

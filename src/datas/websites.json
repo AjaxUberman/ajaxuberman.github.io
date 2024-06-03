@@ -30,8 +30,9 @@
     {
       "img": "https://r.resimlink.com/NWSTMV.png",
       "title": "ToDo Game!",
-      "description": "You must open server first.Click the link.https://todogameserver.onrender.com .An application where you can earn coins by completing tasks and use these coins to purchase free time.",
+      "description": "An application where you can earn coins by completing tasks and use these coins to purchase free time.",
       "href": "https://todogamerpg.netlify.app",
+      "server": "https://todogameserver.onrender.com",
       "repo": "https://github.com/AjaxUberman/todogame"
     },
     {

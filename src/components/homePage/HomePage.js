@@ -73,7 +73,7 @@ const HomePage = () => {
             <div className="flex flex-col items-center">
               <img
                 alt=""
-                src="https://static-00.iconduck.com/assets.00/npm-icon-2048x2048-3xqnd60o.png"
+                src="https://cdn.iconscout.com/icon/free/png-256/free-npm-3-1175132.png"
                 className="w-8 h-8 rounded-full"
               />
               <h1>Npm</h1>
