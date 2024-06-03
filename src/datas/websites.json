@@ -30,7 +30,7 @@
     {
       "img": "https://r.resimlink.com/NWSTMV.png",
       "title": "ToDo Game!",
-      "description": "An application where you can earn coins by completing tasks and use these coins to purchase free time. Built using React and JSON server.",
+      "description": "You must open server first.Click the link.https://todogameserver.onrender.com .An application where you can earn coins by completing tasks and use these coins to purchase free time.",
       "href": "https://todogamerpg.netlify.app",
       "repo": "https://github.com/AjaxUberman/todogame"
     },
